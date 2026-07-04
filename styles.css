@@ -180,20 +180,15 @@ h3 {
   background: rgba(255, 255, 255, 0.7);
 }
 
-.avatar {
+.profile-photo {
   width: 100%;
   aspect-ratio: 1 / 1;
-  display: grid;
-  place-items: center;
   margin-bottom: 16px;
   border: 1px solid rgba(87, 139, 171, 0.35);
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 28% 25%, rgba(217, 150, 104, 0.28), transparent 26%),
-    linear-gradient(135deg, #e6f7ff 0%, #fffef7 100%);
-  color: #234a65;
-  font-size: 42px;
-  font-weight: 800;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 42%;
+  background: #e9f5fb;
 }
 
 dl {
