@@ -193,21 +193,6 @@ h3 {
   object-fit: contain;
 }
 
-.icon-link span {
-  display: grid;
-  place-items: center;
-  width: 27px;
-  height: 27px;
-  border: 1px solid rgba(123, 156, 175, 0.55);
-  border-radius: 7px;
-  background: #fff;
-  color: #24495f;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0;
-  line-height: 1;
-}
-
 .profile-panel {
   padding: 16px;
   border: 1px solid rgba(140, 174, 196, 0.48);
