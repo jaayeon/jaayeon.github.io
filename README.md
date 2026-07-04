@@ -2,12 +2,15 @@
 
 Lightweight static personal website for GitHub Pages.
 
+Live site: https://jaayeon.github.io/
+
 ## Structure
 
 - `index.html` - site content
 - `styles.css` - layout and visual design
 - `script.js` - active navigation highlight
 - `assets/` - CV PDF and research thumbnails
+- `sitemap.xml` and `robots.txt` - search engine discovery metadata
 
 ## Local Preview
 
