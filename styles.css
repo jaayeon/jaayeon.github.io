@@ -9,6 +9,7 @@
   --news: #edf8ff;
   --research: #f8fcff;
   --experience: #eef9f6;
+  --education: #f6f9ff;
   --accent: #7ebee2;
 }
 
@@ -103,6 +104,11 @@ img {
   border-left-color: #72b8a7;
 }
 
+.tint-education {
+  background: var(--education);
+  border-left-color: #95add9;
+}
+
 .intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 248px;
@@ -187,6 +193,21 @@ h3 {
   object-fit: contain;
 }
 
+.icon-link span {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid rgba(123, 156, 175, 0.55);
+  border-radius: 7px;
+  background: #fff;
+  color: #24495f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .profile-panel {
   padding: 16px;
   border: 1px solid rgba(140, 174, 196, 0.48);
@@ -248,8 +269,8 @@ dd:last-child {
   font-weight: 700;
 }
 
-.spotlight {
-  color: var(--ink);
+.spotlight-research {
+  color: #d7371f;
   font-weight: 800;
 }
 
