@@ -300,6 +300,32 @@ dd:last-child {
   font-weight: 700;
 }
 
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 2px 8px;
+  border: 1px solid rgba(87, 139, 171, 0.38);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #184f78;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pub-links a:hover,
+.pub-links a:focus-visible {
+  background: #fff;
+  text-decoration: none;
+}
+
 .pub-copy p:last-child,
 .timeline p:last-child,
 .compact-list p:last-child {
