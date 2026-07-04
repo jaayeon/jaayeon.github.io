@@ -254,17 +254,7 @@ dd:last-child {
 }
 
 .section-heading {
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
-  align-items: baseline;
   margin-bottom: 16px;
-}
-
-.section-heading p {
-  max-width: 520px;
-  margin-bottom: 0;
-  color: var(--muted);
 }
 
 .publication {
