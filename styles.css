@@ -162,15 +162,32 @@ h3 {
 }
 
 .link-row a {
-  min-height: 34px;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
-  padding: 6px 11px;
+  justify-content: center;
+  padding: 0;
   border: 1px solid rgba(87, 139, 171, 0.45);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.62);
   color: #184f78;
-  font-weight: 700;
+}
+
+.link-row a:hover,
+.link-row a:focus-visible {
+  background: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.link-row svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
 }
 
 .profile-panel {
@@ -392,7 +409,6 @@ dd:last-child {
   }
 
   .link-row a {
-    flex: 1 1 auto;
-    justify-content: center;
+    flex: 0 0 40px;
   }
 }
