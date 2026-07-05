@@ -24,3 +24,18 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+const newsToggle = document.querySelector(".news-toggle");
+const extraNewsItems = Array.from(document.querySelectorAll(".news-extra"));
+
+newsToggle?.addEventListener("click", () => {
+  const expanded = newsToggle.getAttribute("aria-expanded") === "true";
+  const nextExpanded = !expanded;
+
+  newsToggle.setAttribute("aria-expanded", String(nextExpanded));
+  newsToggle.textContent = nextExpanded ? "Less news" : "More news";
+
+  extraNewsItems.forEach((item) => {
+    item.hidden = !nextExpanded;
+  });
+});

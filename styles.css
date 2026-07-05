@@ -275,6 +275,41 @@ dd:last-child {
   font-weight: 700;
 }
 
+.news-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2c688b;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.news-toggle::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.news-toggle[aria-expanded="true"]::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.news-toggle:hover,
+.news-toggle:focus-visible {
+  color: #144f73;
+  text-decoration: underline;
+}
+
 .spotlight-research {
   display: inline-flex;
   align-items: center;
