@@ -265,6 +265,10 @@ dd:last-child {
   border-top: 1px solid rgba(122, 164, 190, 0.28);
 }
 
+.news-list li[hidden] {
+  display: none;
+}
+
 .news-list li:first-child {
   border-top: 0;
   padding-top: 0;
@@ -278,16 +282,19 @@ dd:last-child {
 .news-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  margin-top: 10px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #2c688b;
+  gap: 8px;
+  min-height: 30px;
+  margin-top: 12px;
+  padding: 5px 11px;
+  border: 1px solid rgba(76, 137, 174, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: #285f7f;
   font: inherit;
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .news-toggle::after {
@@ -306,8 +313,10 @@ dd:last-child {
 
 .news-toggle:hover,
 .news-toggle:focus-visible {
+  border-color: rgba(42, 105, 143, 0.48);
+  background: rgba(255, 255, 255, 0.9);
   color: #144f73;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .spotlight-research {

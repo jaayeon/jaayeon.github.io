@@ -33,7 +33,7 @@ newsToggle?.addEventListener("click", () => {
   const nextExpanded = !expanded;
 
   newsToggle.setAttribute("aria-expanded", String(nextExpanded));
-  newsToggle.textContent = nextExpanded ? "Less news" : "More news";
+  newsToggle.textContent = nextExpanded ? "Show less" : "Show all news";
 
   extraNewsItems.forEach((item) => {
     item.hidden = !nextExpanded;
