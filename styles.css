@@ -269,6 +269,10 @@ dd:last-child {
   display: none;
 }
 
+.news-list.is-collapsed .news-extra {
+  display: none;
+}
+
 .news-list li:first-child {
   border-top: 0;
   padding-top: 0;
