@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20260807-clear-section-rules">
+    <link rel="stylesheet" href="styles.css?v=20260807-jinotter-layout">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -40,74 +40,66 @@
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <nav class="top-nav" aria-label="Primary navigation">
-        <a href="#news">News</a>
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-      </nav>
-    </header>
-
-    <main class="page-shell">
-      <section class="intro section-band">
-        <div class="intro-copy">
-          <p class="eyebrow">KAIST AI / BISPL Lab</p>
-          <h1>Jaa-Yeon Lee</h1>
-          <p class="lead">
-            I am a PhD student at KAIST AI in the
-            <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>,
-            advised by Prof.
-            <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jong Chul Ye</a>.
-          </p>
-          <p>
-            My recent research focuses on diffusion reinforcement learning for text-to-image
-            alignment in diffusion models. 
-            I am currently working on autoregressive video diffusion models, focusing on long video generation and controllability.
-          </p>
-          <p>
-            Feel free to reach out if you would like to connect or discuss research!
-          </p>
-          <div class="focus-tags" aria-label="Research focus areas">
-            <span>Diffusion RL</span>
-            <span>AR Video Diffusion</span>
-            <span>Representation Alignment</span>
-            <span>T2I/T2V Diffusion </span>
-          </div>
-          <div class="link-row" aria-label="Profile links">
-            <a class="icon-link" href="mailto:jaayeon@kaist.ac.kr" aria-label="Email" title="Email">
-              <img src="assets/icons/gmail.svg" alt="">
-            </a>
-            <a class="icon-link" href="assets/JaaYeonLee_CV_2606.pdf" aria-label="CV" title="CV">
-              <img src="assets/icons/cv.svg" alt="">
-            </a>
-            <a class="icon-link" href="https://scholar.google.com/citations?user=Lw7R3sMAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
-              <img src="assets/icons/googlescholar.svg" alt="">
-            </a>
-            <a class="icon-link" href="https://www.linkedin.com/in/jaa-yeon-lee-21a892193/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
-              <img src="assets/icons/linkedin.svg" alt="">
-            </a>
-            <a class="icon-link" href="https://github.com/jaayeon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-              <img src="assets/icons/github.svg" alt="">
-            </a>
-          </div>
+    <main class="site-layout">
+      <aside class="profile-sidebar" aria-label="Profile">
+        <img class="profile-photo" src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
+        <p class="eyebrow">KAIST AI / BISPL Lab</p>
+        <h1>Jaa-Yeon Lee</h1>
+        <p class="position">PhD Student</p>
+        <p>
+          <a href="https://gsai.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Graduate School of AI, KAIST</a><br>
+          <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>
+        </p>
+        <p class="email">jaayeon (at) kaist.ac.kr</p>
+        <div class="link-row" aria-label="Profile links">
+          <a class="icon-link" href="mailto:jaayeon@kaist.ac.kr" aria-label="Email" title="Email">
+            <img src="assets/icons/gmail.svg" alt="">
+          </a>
+          <a class="icon-link" href="assets/JaaYeonLee_CV_2606.pdf" aria-label="CV" title="CV">
+            <img src="assets/icons/cv.svg" alt="">
+          </a>
+          <a class="icon-link" href="https://scholar.google.com/citations?user=Lw7R3sMAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+            <img src="assets/icons/googlescholar.svg" alt="">
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/jaa-yeon-lee-21a892193/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <img src="assets/icons/linkedin.svg" alt="">
+          </a>
+          <a class="icon-link" href="https://github.com/jaayeon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <img src="assets/icons/github.svg" alt="">
+          </a>
         </div>
-        <aside class="profile-panel" aria-label="Profile summary">
-          <img class="profile-photo" src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
-          <dl>
-            <div>
-              <dt>Current</dt>
-              <dd>PhD Student, KAIST AI</dd>
-            </div>
-            <div>
-              <dt>Last updated</dt>
-              <dd>June 2026</dd>
-            </div>
-          </dl>
-        </aside>
+        <dl class="profile-meta">
+          <div>
+            <dt>Last updated</dt>
+            <dd>June 2026</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <div class="content">
+      <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p class="lead">
+          I am a PhD student at KAIST AI in the
+          <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>,
+          advised by Prof.
+          <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jong Chul Ye</a>.
+        </p>
+        <p>
+          My recent research focuses on diffusion reinforcement learning for text-to-image
+          alignment in diffusion models. I am currently working on autoregressive video
+          diffusion models, focusing on long video generation and controllability.
+        </p>
+        <p>Feel free to reach out if you would like to connect or discuss research!</p>
+        <div class="focus-tags" aria-label="Research focus areas">
+          <span>Diffusion RL</span>
+          <span>AR Video Diffusion</span>
+          <span>Representation Alignment</span>
+          <span>T2I/T2V Diffusion</span>
+        </div>
       </section>
 
-      <section id="news" class="section-band tint-news">
+      <section id="news" class="content-section">
         <h2>News</h2>
         <ul class="news-list is-collapsed" id="news-list">
           <li>
@@ -136,7 +128,7 @@
         </button>
       </section>
 
-      <section id="experience" class="section-band tint-experience">
+      <section id="experience" class="content-section">
         <h2>Experience</h2>
         <div class="timeline">
           <article>
@@ -149,7 +141,7 @@
         </div>
       </section>
 
-      <section id="research" class="section-band tint-research">
+      <section id="research" class="content-section">
         <div class="section-heading">
           <h2>Research</h2>
         </div>
@@ -267,7 +259,7 @@
         </article>
       </section>
 
-      <section id="education" class="section-band tint-education">
+      <section id="education" class="content-section">
         <h2>Education</h2>
         <div class="timeline">
           <article>
@@ -293,11 +285,12 @@
           </article>
         </div>
       </section>
+      </div>
     </main>
 
     <footer class="footer">
       <p>&copy; 2026 Jaa-Yeon Lee.</p>
     </footer>
-    <script src="script.js?v=20260705-news-fix"></script>
+    <script src="script.js?v=20260807-jinotter-layout"></script>
   </body>
 </html>
