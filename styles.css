@@ -412,17 +412,6 @@ dd:last-child {
   text-decoration: none;
 }
 
-.publication-group-title {
-  margin: 24px 0 0;
-  padding-top: 22px;
-  border-top: 1px solid rgba(122, 164, 190, 0.28);
-  color: #547184;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .pub-copy p:last-child,
 .timeline p:last-child {
   margin-bottom: 0;
