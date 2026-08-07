@@ -1,16 +1,16 @@
 :root {
   --page: #f4fbff;
-  --ink: #1a2633;
+  --ink: #1d2a35;
   --muted: #526778;
   --link: #1769aa;
   --link-hover: #0f4f82;
-  --line: #c8dce9;
+  --line: #c8dbe6;
   --panel: #ffffff;
-  --news: #edf8ff;
+  --news: #edf8fd;
   --research: #f8fcff;
-  --experience: #eef9f6;
-  --education: #f6f9ff;
-  --accent: #7ebee2;
+  --experience: #f1f9fb;
+  --education: #f5faff;
+  --accent: #80b9d7;
 }
 
 * {
@@ -25,7 +25,7 @@ body {
   margin: 0;
   background: var(--page);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 15px;
   line-height: 1.55;
 }
@@ -82,13 +82,13 @@ img {
 }
 
 .section-band {
-  margin: 0 0 18px;
-  padding: 26px;
-  border: 1px solid rgba(140, 174, 196, 0.45);
-  border-left: 5px solid var(--accent);
-  border-radius: 8px;
+  margin: 0 0 12px;
+  padding: 28px 24px;
+  border: 1px solid rgba(140, 174, 196, 0.38);
+  border-left: 0;
+  border-radius: 3px;
   background: var(--panel);
-  box-shadow: 0 14px 36px rgba(47, 90, 116, 0.06);
+  box-shadow: none;
 }
 
 .tint-news {
@@ -101,12 +101,10 @@ img {
 
 .tint-experience {
   background: var(--experience);
-  border-left-color: #72b8a7;
 }
 
 .tint-education {
   background: var(--education);
-  border-left-color: #95add9;
 }
 
 .intro {
@@ -173,11 +171,11 @@ h3 {
   min-height: 26px;
   padding: 4px 10px;
   border: 1px solid rgba(76, 137, 174, 0.34);
-  border-radius: 999px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.72);
   color: #284f66;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -196,7 +194,7 @@ h3 {
   justify-content: center;
   padding: 0;
   border: 1px solid rgba(87, 139, 171, 0.45);
-  border-radius: 8px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.62);
   color: #184f78;
   font-weight: 800;
@@ -215,17 +213,14 @@ h3 {
 }
 
 .profile-panel {
-  padding: 16px;
-  border: 1px solid rgba(140, 174, 196, 0.48);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 0;
 }
 
 .profile-photo {
   width: 100%;
   aspect-ratio: 1 / 1;
   margin-bottom: 16px;
-  border: 1px solid rgba(87, 139, 171, 0.35);
+  border: 1px solid rgba(87, 139, 171, 0.3);
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -287,12 +282,12 @@ dd:last-child {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 30px;
-  margin-top: 12px;
-  padding: 5px 11px;
-  border: 1px solid rgba(76, 137, 174, 0.32);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.62);
+  min-height: 24px;
+  margin-top: 10px;
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(76, 137, 174, 0.45);
+  background: transparent;
   color: #285f7f;
   font: inherit;
   font-size: 13px;
@@ -317,8 +312,8 @@ dd:last-child {
 
 .news-toggle:hover,
 .news-toggle:focus-visible {
-  border-color: rgba(42, 105, 143, 0.48);
-  background: rgba(255, 255, 255, 0.9);
+  border-bottom-color: rgba(42, 105, 143, 0.75);
+  background: transparent;
   color: #144f73;
   text-decoration: none;
 }
@@ -330,7 +325,7 @@ dd:last-child {
   margin-left: 6px;
   padding: 3px 9px;
   border: 1px solid rgba(215, 55, 31, 0.28);
-  border-radius: 999px;
+  border-radius: 3px;
   background: rgba(215, 55, 31, 0.09);
   color: #d7371f;
   font-size: 1em;
@@ -359,8 +354,8 @@ dd:last-child {
   width: 230px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid rgba(123, 156, 175, 0.45);
-  border-radius: 8px;
+  border: 1px solid rgba(123, 156, 175, 0.35);
+  border-radius: 3px;
   background: #fff;
 }
 
@@ -395,11 +390,12 @@ dd:last-child {
 .pub-links a {
   display: inline-flex;
   align-items: center;
-  min-height: 25px;
-  padding: 2px 8px;
-  border: 1px solid rgba(87, 139, 171, 0.38);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.65);
+  min-height: 22px;
+  padding: 1px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(87, 139, 171, 0.48);
+  border-radius: 0;
+  background: transparent;
   color: #184f78;
   font-size: 13px;
   font-weight: 700;
@@ -407,24 +403,25 @@ dd:last-child {
 
 .pub-links a:hover,
 .pub-links a:focus-visible {
-  background: #fff;
+  border-bottom-color: currentColor;
+  background: transparent;
   text-decoration: none;
 }
 
-.pub-copy p:last-child,
-.timeline p:last-child,
-.compact-list p:last-child {
-  margin-bottom: 0;
-}
-
-.compact-list {
-  margin-top: 14px;
-  padding-top: 18px;
+.publication-group-title {
+  margin: 24px 0 0;
+  padding-top: 22px;
   border-top: 1px solid rgba(122, 164, 190, 0.28);
+  color: #547184;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.compact-list p {
-  margin-bottom: 7px;
+.pub-copy p:last-child,
+.timeline p:last-child {
+  margin-bottom: 0;
 }
 
 .timeline {

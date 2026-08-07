@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20260705-news-fix">
+    <link rel="stylesheet" href="styles.css?v=20260807-publications-style">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -218,14 +218,72 @@
           </div>
         </article>
 
-        <div class="compact-list">
-          <h3>Earlier Publications</h3>
-          <p><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">MR Reconstruction in k-space using Vision Transformer boosted with Masked Image Modeling</a>, ISMRM 2023.</p>
-          <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Metal Artifact Correction MRI Using Multi-contrast Deep Neural Networks for Diagnosis of Degenerative Spinal Diseases</a>, MICCAI Workshop 2022.</p>
-          <p><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">An unsupervised two-step training framework for LDCT denoising</a>, Medical Physics 2023.</p>
-          <p><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Low-dose Computed Tomography Denoising</a>, IEEE Access 2022.</p>
-          <p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Wavelet Subband-specific Learning for Low-dose Computed Tomography Denoising</a>, PLOS ONE 2022.</p>
-        </div>
+        <h3 class="publication-group-title">Earlier Publications</h3>
+
+        <article class="publication featured">
+          <a class="pub-image" href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer" aria-label="MR reconstruction paper">
+            <img src="assets/mri-reconstruction.png" alt="MRI reconstruction image">
+          </a>
+          <div class="pub-copy">
+            <h3><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">MR Reconstruction in k-space using Vision Transformer boosted with Masked Image Modeling</a></h3>
+            <p class="authors"><strong>Jaa-Yeon Lee</strong>, Sung-Hong Park.</p>
+            <p class="venue">ISMRM 2023</p>
+            <p class="pub-links"><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p>A k-space MR reconstruction method that combines a Vision Transformer with masked image modeling.</p>
+          </div>
+        </article>
+
+        <article class="publication featured">
+          <a class="pub-image" href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer" aria-label="Metal artifact correction MRI paper">
+            <img src="assets/metal-artifact-mri.png" alt="MRI artifact correction image">
+          </a>
+          <div class="pub-copy">
+            <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Metal Artifact Correction MRI Using Multi-contrast Deep Neural Networks for Diagnosis of Degenerative Spinal Diseases</a></h3>
+            <p class="authors">Jaa-Yeon Lee, Min-Ah Yoon, Chang-Gyu Chee, Jae-Hun Cho, Jin-Hwan Park, Sung-Hong Park.</p>
+            <p class="venue">MLMIR 2022, MICCAI Workshop</p>
+            <p class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p>A multi-contrast deep learning approach for correcting metal artifacts in spinal MRI.</p>
+          </div>
+        </article>
+
+        <article class="publication featured">
+          <a class="pub-image" href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer" aria-label="Two-step low-dose CT denoising paper">
+            <img src="assets/ldct-two-step.png" alt="Low-dose CT denoising image">
+          </a>
+          <div class="pub-copy">
+            <h3><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">An Unsupervised Two-step Training Framework for Low-dose Computed Tomography Denoising</a></h3>
+            <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Jang-Hwan Choi.</p>
+            <p class="venue">Medical Physics 2024</p>
+            <p class="pub-links"><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p>A two-step unsupervised framework for low-dose CT denoising using noise-to-noise training and cycle-consistent refinement.</p>
+          </div>
+        </article>
+
+        <article class="publication featured">
+          <a class="pub-image" href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer" aria-label="Unsupervised domain adaptation CT paper">
+            <img src="assets/domain-adaptation-ldct.png" alt="Low-dose CT image">
+          </a>
+          <div class="pub-copy">
+            <h3><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Low-dose Computed Tomography Denoising</a></h3>
+            <p class="authors"><strong>Jaa-Yeon Lee</strong>, Wonjin Kim, Yebin Lee, Ji-Yeon Lee, Eunji Ko, Jang-Hwan Choi.</p>
+            <p class="venue">IEEE Access 2022</p>
+            <p class="pub-links"><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p>An unsupervised domain adaptation framework for transferring LDCT denoising from phantom scans to unlabeled clinical CT.</p>
+          </div>
+        </article>
+
+        <article class="publication featured">
+          <a class="pub-image" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer" aria-label="Wavelet low-dose CT denoising paper">
+            <img src="assets/wavelet-ldct.png" alt="Wavelet subband-specific learning diagram">
+          </a>
+          <div class="pub-copy">
+            <h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Wavelet Subband-specific Learning for Low-dose Computed Tomography Denoising</a></h3>
+            <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Mihyun Kang, Jin Sung Kim, Jang-Hwan Choi.</p>
+            <p class="venue">PLOS ONE 2022</p>
+            <p class="pub-links"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p>A stationary wavelet transform and subband-specific loss strategy for balancing objective and perceptual quality in LDCT denoising.</p>
+          </div>
+        </article>
       </section>
 
       <section id="education" class="section-band tint-education">
