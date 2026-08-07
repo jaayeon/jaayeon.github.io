@@ -86,28 +86,32 @@ img {
   margin: 0;
   padding: 36px max(24px, calc((100vw - 912px) / 2));
   border: 0;
-  background: var(--panel);
+  background: var(--page);
   box-shadow: none;
 }
 
-.section-band + .section-band {
-  border-top: 1px solid rgba(140, 174, 196, 0.25);
+.section-band + .section-band::before {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: -36px auto 28px;
+  border-top: 1px solid rgba(140, 174, 196, 0.35);
 }
 
 .tint-news {
-  background: var(--news);
+  background: var(--page);
 }
 
 .tint-research {
-  background: #f9fcff;
+  background: var(--page);
 }
 
 .tint-experience {
-  background: var(--experience);
+  background: var(--page);
 }
 
 .tint-education {
-  background: var(--education);
+  background: var(--page);
 }
 
 .intro {
@@ -370,6 +374,13 @@ dd:last-child {
   background: #fff;
 }
 
+.pub-placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(224, 237, 244, 0.52);
+}
+
 .authors,
 .venue {
   margin-bottom: 4px;
@@ -460,6 +471,11 @@ dd:last-child {
     padding: 26px 20px;
   }
 
+  .section-band + .section-band::before {
+    margin-top: -26px;
+    margin-bottom: 20px;
+  }
+
   .intro,
   .publication,
   .publication.featured,
@@ -507,6 +523,11 @@ dd:last-child {
 
   .section-band {
     padding: 16px;
+  }
+
+  .section-band + .section-band::before {
+    margin-top: -16px;
+    margin-bottom: 16px;
   }
 
   .link-row a {
