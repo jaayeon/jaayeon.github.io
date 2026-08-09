@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20260809-restore">
+    <link rel="stylesheet" href="styles.css?v=20260809-sidebar">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -40,12 +40,11 @@
     </script>
   </head>
   <body>
-    <main class="page">
-      <header class="profile">
-        <img class="profile-photo" src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
-        <div class="profile-copy">
+    <div class="page">
+      <aside class="sidebar" aria-label="Profile">
+        <img class="portrait" src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
           <h1>Jaa-Yeon Lee</h1>
-          <p class="role">PhD Student</p>
+          <p class="position">PhD Student</p>
           <p>
             <a href="https://gsai.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Graduate School of AI, KAIST</a><br>
             <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>
@@ -58,8 +57,9 @@
             <a href="https://github.com/jaayeon" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/jaa-yeon-lee-21a892193/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>
-        </div>
-      </header>
+      </aside>
+
+      <main class="content">
 
       <section id="about" class="section">
         <h2>About Me</h2>
@@ -111,117 +111,117 @@
 
       <section id="publications" class="section">
         <h2>Publications</h2>
-        <p class="legend">P: preprint, C: conference/journal</p>
+        <p class="publication-note">P: preprint, C: conference/journal</p>
 
-        <article class="publication">
-          <a class="pub-image" href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer" aria-label="Alignment-Guided Score Matching paper">
+        <article class="paper">
+          <a class="paper-thumb paper-thumb-contain" href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer" aria-label="Alignment-Guided Score Matching paper">
             <img src="assets/agsm-method.png" alt="AGSM alignment-guided score matching method diagram">
           </a>
-          <div class="pub-copy">
-            <h3>[C1] <a href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer">Alignment-Guided Score Matching for Text-to-Image Alignment in Diffusion Models</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C1]</span><a href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer">Alignment-Guided Score Matching for Text-to-Image Alignment in Diffusion Models</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee*</strong>, Yeobin Hong*, Taesung Kwon, Jong Chul Ye.</p>
             <p class="venue">ICML 2026, Spotlight (top 2.2%).</p>
-            <p class="pub-links">
+            <p class="paper-links">
               <a href="https://jaayeon.github.io/AGSM/" target="_blank" rel="noopener noreferrer">Project</a>
               <a href="https://github.com/jaayeon/AGSM" target="_blank" rel="noopener noreferrer">Code</a>
             </p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer" aria-label="SoftREPA paper">
+        <article class="paper">
+          <a class="paper-thumb paper-thumb-contain" href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer" aria-label="SoftREPA paper">
             <img src="assets/softrepa-method.jpg" alt="SoftREPA method diagram">
           </a>
-          <div class="pub-copy">
-            <h3>[C2] <a href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer">SoftREPA: Aligning Text to Image in Diffusion Models is Easier Than You Think</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C2]</span><a href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer">SoftREPA: Aligning Text to Image in Diffusion Models is Easier Than You Think</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee*</strong>, Byunghee Cha*, Jeongsol Kim, Jong Chul Ye.</p>
             <p class="venue">NeurIPS 2025.</p>
-            <p class="pub-links">
+            <p class="paper-links">
               <a href="https://softrepa.github.io/" target="_blank" rel="noopener noreferrer">Project</a>
               <a href="https://github.com/softrepa/SoftREPA" target="_blank" rel="noopener noreferrer">Code</a>
             </p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer" aria-label="UNICORN paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer" aria-label="UNICORN paper">
             <img src="assets/unicorn-main.png" alt="UNICORN ultrasound Nakagami imaging method diagram">
           </a>
-          <div class="pub-copy">
-            <h3>[P1] <a href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer">UNICORN: Ultrasound Nakagami Imaging via Score Matching and Adaptation for Assessing Hepatic Steatosis</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[P1]</span><a href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer">UNICORN: Ultrasound Nakagami Imaging via Score Matching and Adaptation for Assessing Hepatic Steatosis</a></h3>
             <p class="authors">Kwanyoung Kim*, <strong>Jaa-Yeon Lee*</strong>, Youngjun Ko, GunWoo Lee, Jong Chul Ye.</p>
             <p class="venue">arXiv, 2026.</p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer" aria-label="MindFormer paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer" aria-label="MindFormer paper">
             <img src="assets/mindformer-method.png" alt="MindFormer method diagram for multi-subject fMRI brain decoding">
           </a>
-          <div class="pub-copy">
-            <h3>[P2] <a href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer">MindFormer: Semantic Alignment of Multi-Subject fMRI for Brain Decoding</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[P2]</span><a href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer">MindFormer: Semantic Alignment of Multi-Subject fMRI for Brain Decoding</a></h3>
             <p class="authors">Inhwa Han, Changsun Lee, <strong>Jaayeon Lee</strong>, Jong Chul Ye.</p>
             <p class="venue">arXiv, 2024.</p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer" aria-label="MR reconstruction paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer" aria-label="MR reconstruction paper">
             <img src="assets/mri-reconstruction-main.png" alt="MR reconstruction paper main figure">
           </a>
-          <div class="pub-copy">
-            <h3>[C3] <a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">MR Reconstruction in k-space using Vision Transformer boosted with Masked Image Modeling</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C3]</span><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">MR Reconstruction in k-space using Vision Transformer boosted with Masked Image Modeling</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee</strong>, Sung-Hong Park.</p>
             <p class="venue">ISMRM 2023.</p>
-            <p class="pub-links"><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p class="paper-links"><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer" aria-label="Metal artifact correction MRI paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer" aria-label="Metal artifact correction MRI paper">
             <img src="assets/metal-artifact-mri.png" alt="Metal artifact correction MRI paper figure">
           </a>
-          <div class="pub-copy">
-            <h3>[C4] <a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Metal Artifact Correction MRI Using Multi-contrast Deep Neural Networks for Diagnosis of Degenerative Spinal Diseases</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C4]</span><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Metal Artifact Correction MRI Using Multi-contrast Deep Neural Networks for Diagnosis of Degenerative Spinal Diseases</a></h3>
             <p class="authors">Jaa-Yeon Lee, Min-Ah Yoon, Chang-Gyu Chee, Jae-Hun Cho, Jin-Hwan Park, Sung-Hong Park.</p>
             <p class="venue">MLMIR 2022, MICCAI Workshop.</p>
-            <p class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p class="paper-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer" aria-label="Two-step low-dose CT denoising paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer" aria-label="Two-step low-dose CT denoising paper">
             <img src="assets/ldct-two-step.png" alt="Two-step low-dose CT denoising paper figure">
           </a>
-          <div class="pub-copy">
-            <h3>[C5] <a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">An Unsupervised Two-step Training Framework for Low-dose Computed Tomography Denoising</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C5]</span><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">An Unsupervised Two-step Training Framework for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Jang-Hwan Choi.</p>
             <p class="venue">Medical Physics 2024.</p>
-            <p class="pub-links"><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p class="paper-links"><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer" aria-label="Unsupervised domain adaptation CT paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer" aria-label="Unsupervised domain adaptation CT paper">
             <img src="assets/domain-adaptation-ldct.png" alt="Unsupervised domain adaptation CT paper figure">
           </a>
-          <div class="pub-copy">
-            <h3>[C6] <a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Low-dose Computed Tomography Denoising</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C6]</span><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee</strong>, Wonjin Kim, Yebin Lee, Ji-Yeon Lee, Eunji Ko, Jang-Hwan Choi.</p>
             <p class="venue">IEEE Access 2022.</p>
-            <p class="pub-links"><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p class="paper-links"><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
 
-        <article class="publication">
-          <a class="pub-image" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer" aria-label="Wavelet low-dose CT denoising paper">
+        <article class="paper">
+          <a class="paper-thumb" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer" aria-label="Wavelet low-dose CT denoising paper">
             <img src="assets/wavelet-ldct-main.png" alt="Wavelet subband-specific learning paper main figure">
           </a>
-          <div class="pub-copy">
-            <h3>[C7] <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Wavelet Subband-specific Learning for Low-dose Computed Tomography Denoising</a></h3>
+          <div class="paper-body">
+            <h3><span class="pub-index">[C7]</span><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Wavelet Subband-specific Learning for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Mihyun Kang, Jin Sung Kim, Jang-Hwan Choi.</p>
             <p class="venue">PLOS ONE 2022.</p>
-            <p class="pub-links"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            <p class="paper-links"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
       </section>
@@ -265,11 +265,12 @@
           </article>
         </div>
       </section>
-    </main>
+      </main>
+    </div>
 
     <footer class="footer">
       <p>&copy; 2026 Jaa-Yeon Lee. Last updated June 2026.</p>
     </footer>
-    <script src="script.js?v=20260809-restore"></script>
+    <script src="script.js?v=20260809-sidebar"></script>
   </body>
 </html>
