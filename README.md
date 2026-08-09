@@ -8,7 +8,7 @@ Live site: https://jaayeon.github.io/
 
 - `index.html` - site content
 - `styles.css` - layout and visual design
-- `script.js` - active navigation highlight
+- `script.js` - expandable news list
 - `assets/` - CV PDF and research thumbnails
 - `sitemap.xml` and `robots.txt` - search engine discovery metadata
 
