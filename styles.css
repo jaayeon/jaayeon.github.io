@@ -215,8 +215,8 @@ dd {
 .focus-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 22px 0 0;
+  gap: 14px 15px;
+  margin: 24px 0 0;
 }
 
 .focus-topic {
@@ -224,19 +224,20 @@ dd {
 }
 
 .focus-topic summary {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 38px;
-  padding: 7px 13px;
-  border: 1px solid #bcd4e3;
-  border-radius: 10px;
-  background: #e8f3fa;
-  color: #285575;
-  font-size: 13px;
-  font-weight: 650;
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 1px solid #c4dce9;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fff 0%, #e9f4fb 100%);
+  color: #315e7b;
+  font-size: 12px;
+  font-weight: 600;
   list-style: none;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(45, 92, 124, 0.03);
 }
 
 .focus-topic summary::-webkit-details-marker {
@@ -245,25 +246,72 @@ dd {
 
 .focus-topic summary:hover,
 .focus-topic[open] summary {
-  border-color: #7ca9c6;
-  background: #dceef9;
+  border-color: #87b3cf;
+  background: linear-gradient(135deg, #f8fcff 0%, #dceef9 100%);
+  color: #194f75;
+  box-shadow: 0 5px 14px rgba(45, 92, 124, 0.1);
 }
 
 .focus-topic summary:focus-visible {
   outline: 2px solid var(--link);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }
 
 .topic-count {
+  position: absolute;
+  top: -7px;
+  right: -5px;
   display: grid;
   place-items: center;
-  min-width: 21px;
-  height: 21px;
-  padding: 0 5px;
-  border-radius: 6px;
-  background: #fff;
-  color: #547b96;
-  font-size: 11px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border: 2px solid var(--page);
+  border-radius: 999px;
+  background: #d7e9f5;
+  color: #3e7193;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.focus-topic[open] .topic-count {
+  background: #39769f;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .focus-topic summary {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
+
+  .topic-count {
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  }
+
+  .focus-topic[open] .topic-count {
+    transform: scale(1.08);
+  }
+
+  .focus-topic[open] .topic-panel {
+    animation: topic-reveal 170ms ease-out;
+  }
+
+  @keyframes topic-reveal {
+    from { opacity: 0; translate: 0 5px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .focus-topic:hover summary {
+    transform: translateY(-2px);
+  }
+
+  .focus-topic summary:active {
+    transform: translateY(0) scale(0.98);
+  }
 }
 
 .topic-panel {
