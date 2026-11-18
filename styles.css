@@ -147,6 +147,7 @@ h3 {
   }
 
   .portrait-subject img {
+    transform-origin: 40% 56%;
     transition: transform 280ms ease-out;
   }
 
@@ -162,7 +163,7 @@ h3 {
   }
 
   .portrait-subject:hover img {
-    transform: translate(var(--portrait-x, 0px), var(--portrait-y, 0px)) scale(1.025);
+    transform: translate(var(--portrait-x, 0px), var(--portrait-y, 0px)) scale(1.065);
   }
 
   .portrait-subject:hover::after {

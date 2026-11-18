@@ -117,8 +117,8 @@ portraitSubject?.addEventListener("pointermove", (event) => {
   const bounds = portraitSubject.getBoundingClientRect();
   const x = (event.clientX - bounds.left) / bounds.width;
   const y = (event.clientY - bounds.top) / bounds.height;
-  portraitSubject.style.setProperty("--portrait-x", `${(x - 0.5) * 4}px`);
-  portraitSubject.style.setProperty("--portrait-y", `${(y - 0.5) * 4}px`);
+  portraitSubject.style.setProperty("--portrait-x", `${(x - 0.5) * 6}px`);
+  portraitSubject.style.setProperty("--portrait-y", `${(y - 0.5) * 6}px`);
   portraitSubject.style.setProperty("--portrait-light-x", `${x * 100}%`);
   portraitSubject.style.setProperty("--portrait-light-y", `${y * 100}%`);
 });
