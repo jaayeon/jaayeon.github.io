@@ -189,25 +189,155 @@ dd {
   font-size: 16px;
 }
 
+#about .lead {
+  max-width: 66ch;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.about-research {
+  max-width: 70ch;
+  line-height: 1.85;
+  color: #415866;
+}
+
+.about-research strong {
+  color: #273d4d;
+  font-weight: 600;
+}
+
+.about-contact {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .focus-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin: 16px 0 0;
+  gap: 10px;
+  margin: 22px 0 0;
 }
 
-.focus-tags span {
+.focus-topic {
+  position: relative;
+}
+
+.focus-topic summary {
   display: inline-flex;
   align-items: center;
-  min-height: 25px;
-  padding: 3px 9px;
-  border: 1px solid #c5dae7;
-  border-radius: 999px;
+  gap: 10px;
+  min-height: 38px;
+  padding: 7px 13px;
+  border: 1px solid #bcd4e3;
+  border-radius: 10px;
+  background: #e8f3fa;
+  color: #285575;
+  font-size: 13px;
+  font-weight: 650;
+  list-style: none;
+  cursor: pointer;
+}
+
+.focus-topic summary::-webkit-details-marker {
+  display: none;
+}
+
+.focus-topic summary:hover,
+.focus-topic[open] summary {
+  border-color: #7ca9c6;
+  background: #dceef9;
+}
+
+.focus-topic summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.topic-count {
+  display: grid;
+  place-items: center;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 5px;
+  border-radius: 6px;
+  background: #fff;
+  color: #547b96;
+  font-size: 11px;
+}
+
+.topic-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 5;
+  width: min(320px, calc(100vw - 40px));
+  padding: 12px;
+  border: 1px solid #d5e3ed;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(31, 65, 88, 0.13);
+  transform: translateX(var(--panel-shift, 0px));
+}
+
+.topic-panel::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.topic-heading {
+  margin: 0 8px 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.topic-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-panel a {
+  display: block;
+  padding: 9px 8px;
+  border-radius: 7px;
+  line-height: 1.45;
+}
+
+.topic-panel a:hover,
+.topic-panel a:focus-visible {
   background: var(--soft);
-  color: #315875;
+  text-decoration: none;
+}
+
+.topic-panel a strong {
+  display: block;
+  font-size: 14px;
+}
+
+.topic-panel a span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
   font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
+}
+
+.research-card {
+  scroll-margin-top: 28px;
+}
+
+.research-card:target {
+  outline: 2px solid #8ab7ce;
+  outline-offset: 9px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 .link-row {

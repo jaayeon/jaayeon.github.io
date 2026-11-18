@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20261118-smooth-viewer">
+    <link rel="stylesheet" href="styles.css?v=20261118-research-topics">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -80,21 +80,66 @@
       <section id="about" class="content-section">
         <h2>About Me</h2>
         <p class="lead">
-          I am a PhD student at KAIST AI in the
+          I am a <strong>4th-year PhD student</strong> at KAIST AI in the
           <a href="https://bispl-website.github.io/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>,
           advised by Prof.
           <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jong Chul Ye</a>.
         </p>
-        <p>
-          My recent research focuses on diffusion reinforcement learning for diffusion models. I am currently working on autoregressive video
-          diffusion models, focusing on long video generation and improving controllability.
+        <p class="about-research">
+          My research focuses on <strong>diffusion reinforcement learning</strong> for diffusion models.
+          I am currently working on <strong>autoregressive video diffusion</strong>, with a focus on
+          <strong>long video generation</strong> and <strong>controllability</strong>.
         </p>
-        <p>Feel free to reach out if you would like to connect or discuss research!</p>
-        <div class="focus-tags" aria-label="Research focus areas">
-          <span>Diffusion RL</span>
-          <span>AR Video Diffusion</span>
-          <span>Representation Alignment</span>
-          <span>T2I/T2V Diffusion</span>
+        <p class="about-contact">Feel free to reach out if you would like to connect or discuss research!</p>
+        <div class="focus-tags" aria-label="Explore research by topic">
+          <details class="focus-topic">
+            <summary>Diffusion RL<span class="topic-count" aria-label="1 related studies">1</span></summary>
+            <div class="topic-panel">
+              <p class="topic-heading">Related research</p>
+              <ul>
+                <li><a href="#policy-forcing"><strong>Policy Forcing</strong><span>KV cache policies for AR video generation</span></a></li>
+              </ul>
+            </div>
+          </details>
+          <details class="focus-topic">
+            <summary>AR Video Diffusion<span class="topic-count" aria-label="1 related studies">1</span></summary>
+            <div class="topic-panel">
+              <p class="topic-heading">Related research</p>
+              <ul>
+                <li><a href="#policy-forcing"><strong>Policy Forcing</strong><span>KV cache policies for AR video generation</span></a></li>
+              </ul>
+            </div>
+          </details>
+          <details class="focus-topic">
+            <summary>Representation Alignment<span class="topic-count" aria-label="3 related studies">3</span></summary>
+            <div class="topic-panel">
+              <p class="topic-heading">Related research</p>
+              <ul>
+                <li><a href="#agsm"><strong>AGSM</strong><span>Text-to-image alignment and editing</span></a></li>
+                <li><a href="#softrepa"><strong>SoftREPA</strong><span>Text-to-image representation alignment</span></a></li>
+                <li><a href="#mindformer"><strong>MindFormer</strong><span>Semantic alignment for brain decoding</span></a></li>
+              </ul>
+            </div>
+          </details>
+          <details class="focus-topic">
+            <summary>T2I Diffusion<span class="topic-count" aria-label="2 related studies">2</span></summary>
+            <div class="topic-panel">
+              <p class="topic-heading">Related research</p>
+              <ul>
+                <li><a href="#agsm"><strong>AGSM</strong><span>Text-to-image alignment and editing</span></a></li>
+                <li><a href="#softrepa"><strong>SoftREPA</strong><span>Text-to-image representation alignment</span></a></li>
+              </ul>
+            </div>
+          </details>
+          <details class="focus-topic">
+            <summary>T2V Diffusion<span class="topic-count" aria-label="1 related studies">1</span></summary>
+            <div class="topic-panel">
+              <p class="topic-heading">Related research</p>
+              <ul>
+                <li><a href="#policy-forcing"><strong>Policy Forcing</strong><span>KV cache policies for AR video generation</span></a></li>
+              </ul>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -146,7 +191,7 @@
         </div>
 
         <div class="research-grid">
-        <article class="publication research-card">
+        <article id="policy-forcing" class="publication research-card" tabindex="-1">
           <button class="pub-image" type="button" aria-label="Open full Policy Forcing figure">
             <img loading="lazy" decoding="async" src="assets/policy-forcing-main.png" alt="Policy Forcing adaptive KV cache masking and results for long video and multi-prompt generation">
           </button>
@@ -157,7 +202,7 @@
           </div>
         </article>
 
-        <article class="publication research-card">
+        <article id="agsm" class="publication research-card" tabindex="-1">
           <button class="pub-image" type="button" aria-label="Open full research figure">
             <img loading="lazy" decoding="async" src="assets/agsm-front.png" alt="AGSM text-to-image generation and editing results compared with SD3">
           </button>
@@ -172,7 +217,7 @@
           </div>
         </article>
 
-        <article class="publication research-card">
+        <article id="softrepa" class="publication research-card" tabindex="-1">
           <button class="pub-image" type="button" aria-label="Open full research figure">
             <img loading="lazy" decoding="async" src="assets/softrepa-front.jpg" alt="SoftREPA text rendering and image editing results compared with SD3">
           </button>
@@ -187,7 +232,7 @@
           </div>
         </article>
 
-        <article class="publication research-card">
+        <article id="unicorn" class="publication research-card" tabindex="-1">
           <button class="pub-image" type="button" aria-label="Open full research figure">
             <img loading="lazy" decoding="async" src="assets/unicorn-main.png" alt="UNICORN ultrasound Nakagami imaging method diagram">
           </button>
@@ -202,7 +247,7 @@
         <details class="more-publications">
           <summary><span class="when-closed">More</span><span class="when-open">Less</span><span class="publication-count">6</span></summary>
           <div class="research-grid additional-research">
-        <article class="publication research-card">
+        <article id="mindformer" class="publication research-card" tabindex="-1">
           <button class="pub-image" type="button" aria-label="Open full research figure">
             <img loading="lazy" decoding="async" src="assets/mindformer-method.png" alt="MindFormer method diagram for multi-subject fMRI brain decoding">
           </button>
@@ -294,6 +339,6 @@
     <footer class="footer">
       <p>&copy; 2026 Jaa-Yeon Lee.</p>
     </footer>
-    <script src="script.js?v=20261118-smooth-viewer"></script>
+    <script src="script.js?v=20261118-research-topics"></script>
   </body>
 </html>

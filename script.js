@@ -109,3 +109,56 @@ for (const figure of document.querySelectorAll(".pub-image")) {
   figure.addEventListener("pointercancel", resetFigure);
   figureMotion.addEventListener("change", resetFigure);
 }
+
+// Topic disclosures work with hover, click, touch, and keyboard navigation.
+const researchTopics = Array.from(document.querySelectorAll(".focus-topic"));
+const hoverTopics = window.matchMedia("(hover: hover) and (pointer: fine)");
+const fitTopicPanel = (topic) => {
+  const panel = topic.querySelector(".topic-panel");
+  panel.style.removeProperty("--panel-shift");
+  const bounds = panel.getBoundingClientRect();
+  const shift = Math.min(0, window.innerWidth - 20 - bounds.right);
+  panel.style.setProperty("--panel-shift", `${Math.max(20 - bounds.left, shift)}px`);
+};
+for (const topic of researchTopics) {
+  let hoverTimer;
+  topic.addEventListener("toggle", () => {
+    if (!topic.open) return;
+    researchTopics.forEach((other) => { if (other !== topic) other.open = false; });
+    fitTopicPanel(topic);
+  });
+  topic.addEventListener("pointerenter", (event) => {
+    window.clearTimeout(hoverTimer);
+    if (hoverTopics.matches && event.pointerType === "mouse") topic.open = true;
+  });
+  topic.addEventListener("pointerleave", () => {
+    hoverTimer = window.setTimeout(() => {
+      if (!topic.matches(":focus-within")) topic.open = false;
+    }, 160);
+  });
+  topic.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    topic.open = false;
+    topic.querySelector("summary").focus();
+    event.stopPropagation();
+  });
+  topic.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const target = document.getElementById(link.hash.slice(1));
+      if (!target) return;
+      event.preventDefault();
+      const disclosure = target.closest("details");
+      if (disclosure) disclosure.open = true;
+      topic.open = false;
+      history.pushState(null, "", link.hash);
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "start" });
+    });
+  });
+}
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".focus-topic")) researchTopics.forEach((topic) => { topic.open = false; });
+});
+window.addEventListener("resize", () => researchTopics.forEach((topic) => {
+  if (topic.open) fitTopicPanel(topic);
+}));
