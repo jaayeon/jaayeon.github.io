@@ -322,22 +322,28 @@ dd {
   gap: 14px;
 }
 
-.research-visual {
-  position: relative;
-  isolation: isolate;
-}
-
 .pub-image {
+  position: relative;
   display: block;
+  flex: none;
   width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
   aspect-ratio: 16 / 10;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  appearance: none;
   border: 1px solid #c3d7e2;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #fff;
+  cursor: zoom-in;
 }
 
 .pub-image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -345,25 +351,9 @@ dd {
   background: #fff;
 }
 
-.figure-expand {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 6px 11px;
-  border: 1px solid rgba(195, 215, 226, 0.85);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
-  color: #285f82;
-  font: inherit;
-  font-size: 11px;
-  font-weight: 650;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(34, 48, 59, 0.08);
-}
-
-.figure-expand:hover,
-.figure-expand:focus-visible {
-  background: #e8f3fa;
+.pub-image:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
 }
 
 .figure-viewer {

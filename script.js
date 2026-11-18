@@ -41,21 +41,12 @@ figureViewer.addEventListener("click", (event) => {
 for (const figure of document.querySelectorAll(".pub-image")) {
   const image = figure.querySelector("img");
   if (!image) continue;
-  const wrapper = document.createElement("div");
-  wrapper.className = "research-visual";
-  figure.before(wrapper);
-  wrapper.append(figure);
-  const expand = document.createElement("button");
-  expand.type = "button";
-  expand.className = "figure-expand";
-  expand.textContent = "View figure ↗";
-  expand.setAttribute("aria-label", `View full figure: ${image.alt}`);
-  expand.addEventListener("click", () => {
+  figure.setAttribute("aria-label", `View full figure: ${image.alt}`);
+  figure.addEventListener("click", () => {
     fullFigure.src = image.currentSrc || image.src;
     fullFigure.alt = image.alt;
     figureViewer.showModal();
   });
-  wrapper.append(expand);
   const resetFigure = () => {
     figure.classList.remove("is-exploring");
     figure.style.removeProperty("--figure-x");
