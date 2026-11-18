@@ -58,12 +58,13 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 16px;
-  color: #253d4e;
-  font-size: 23px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  margin: 0 0 17px;
+  color: #1f3f56;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 2.5vw, 34px);
+  line-height: 1.13;
+  font-weight: 400;
+  letter-spacing: -0.035em;
 }
 
 h3 {
