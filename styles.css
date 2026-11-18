@@ -323,11 +323,8 @@ dd {
 }
 
 .pub-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
   overflow: hidden;
   border: 1px solid #c3d7e2;
   border-radius: 6px;
@@ -336,15 +333,30 @@ dd {
 
 .pub-image img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   background: #fff;
+  transform-origin: var(--figure-x, 50%) var(--figure-y, 50%);
 }
 
-.pub-image-pending {
-  background: var(--soft);
-  color: #637987;
-  font-size: 16px;
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .pub-image {
+    cursor: zoom-in;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .pub-image img {
+    transition: transform 240ms ease-out;
+    will-change: auto;
+  }
+
+  .pub-image.is-exploring {
+    border-color: var(--link);
+    box-shadow: 0 5px 18px rgba(36, 99, 154, 0.12);
+  }
+
+  .pub-image.is-exploring img {
+    transform: scale(1.65);
+  }
 }
 
 .research-card .authors {
