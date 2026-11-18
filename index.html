@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20260809-default-font">
+    <link rel="stylesheet" href="styles.css?v=20261118-research-grid">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -50,12 +50,12 @@
           <a href="https://gsai.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Graduate School of AI, KAIST</a><br>
           <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>
         </p>
-        <p class="email">jaayeon (at) kaist.ac.kr</p>
+        <p class="email">jaayeon@kaist.ac.kr</p>
         <div class="link-row" aria-label="Profile links">
           <a class="icon-link" href="mailto:jaayeon@kaist.ac.kr" aria-label="Email" title="Email">
             <img src="assets/icons/gmail.svg" alt="">
           </a>
-          <a class="icon-link" href="assets/JaaYeonLee_CV_2606.pdf" aria-label="CV" title="CV">
+          <a class="icon-link" href="assets/JaaYeonLee_CV_2611.pdf" aria-label="CV" title="CV">
             <img src="assets/icons/cv.svg" alt="">
           </a>
           <a class="icon-link" href="https://scholar.google.com/citations?user=Lw7R3sMAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
@@ -81,14 +81,13 @@
         <h2>About Me</h2>
         <p class="lead">
           I am a PhD student at KAIST AI in the
-          <a href="https://bispl.weebly.com/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>,
+          <a href="https://bispl-website.github.io/" target="_blank" rel="noopener noreferrer">BISPL Lab</a>,
           advised by Prof.
           <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jong Chul Ye</a>.
         </p>
         <p>
-          My recent research focuses on diffusion reinforcement learning for text-to-image
-          alignment in diffusion models. I am currently working on autoregressive video
-          diffusion models, focusing on long video generation and controllability.
+          My recent research focuses on diffusion reinforcement learning for diffusion models. I am currently working on autoregressive video
+          diffusion models, focusing on long video generation and improving controllability.
         </p>
         <p>Feel free to reach out if you would like to connect or discuss research!</p>
         <div class="focus-tags" aria-label="Research focus areas">
@@ -143,12 +142,24 @@
 
       <section id="publications" class="content-section">
         <div class="section-heading">
-          <h2>Publications</h2>
+          <h2>Research</h2>
         </div>
 
-        <article class="publication featured">
+        <div class="research-grid">
+        <article class="publication research-card">
+          <div class="pub-image">
+            <img loading="lazy" decoding="async" src="assets/policy-forcing-main.png" alt="Policy Forcing adaptive KV cache masking and results for long video and multi-prompt generation">
+          </div>
+          <div class="pub-copy">
+            <h3>Policy Forcing: Learning KV Cache Masking Policy for AR Video Generation</h3>
+            <p class="authors"><strong>Jaa-Yeon Lee*</strong>, Jong Chul Ye.</p>
+            <p class="venue">Under Review</p>
+          </div>
+        </article>
+
+        <article class="publication research-card">
           <a class="pub-image" href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer" aria-label="Alignment-Guided Score Matching paper">
-            <img src="assets/agsm-method.png" alt="AGSM alignment-guided score matching method diagram">
+            <img loading="lazy" decoding="async" src="assets/agsm-front.png" alt="AGSM text-to-image generation and editing results compared with SD3">
           </a>
           <div class="pub-copy">
             <h3><a href="https://arxiv.org/pdf/2605.30038v1" target="_blank" rel="noopener noreferrer">Alignment-Guided Score Matching for Text-to-Image Alignment in Diffusion Models</a></h3>
@@ -161,9 +172,9 @@
           </div>
         </article>
 
-        <article class="publication featured">
+        <article class="publication research-card">
           <a class="pub-image" href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer" aria-label="SoftREPA paper">
-            <img src="assets/softrepa-method.jpg" alt="SoftREPA method diagram">
+            <img loading="lazy" decoding="async" src="assets/softrepa-front.jpg" alt="SoftREPA text rendering and image editing results compared with SD3">
           </a>
           <div class="pub-copy">
             <h3><a href="https://arxiv.org/pdf/2503.08250" target="_blank" rel="noopener noreferrer">SoftREPA: Aligning Text to Image in Diffusion Models is Easier Than You Think</a></h3>
@@ -176,9 +187,9 @@
           </div>
         </article>
 
-        <article class="publication featured">
+        <article class="publication research-card">
           <a class="pub-image" href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer" aria-label="UNICORN paper">
-            <img src="assets/unicorn-main.png" alt="UNICORN ultrasound Nakagami imaging method diagram">
+            <img loading="lazy" decoding="async" src="assets/unicorn-main.png" alt="UNICORN ultrasound Nakagami imaging method diagram">
           </a>
           <div class="pub-copy">
             <h3><a href="https://arxiv.org/abs/2603.16942" target="_blank" rel="noopener noreferrer">UNICORN: Ultrasound Nakagami Imaging via Score Matching and Adaptation for Assessing Hepatic Steatosis</a></h3>
@@ -186,10 +197,14 @@
             <p class="venue">arXiv, 2026</p>
           </div>
         </article>
+        </div>
 
-        <article class="publication featured">
+        <details class="more-publications">
+          <summary><span class="when-closed">More publications</span><span class="when-open">Fewer publications</span><span class="publication-count">6</span></summary>
+          <div class="research-grid additional-research">
+        <article class="publication research-card">
           <a class="pub-image" href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer" aria-label="MindFormer paper">
-            <img src="assets/mindformer-method.png" alt="MindFormer method diagram for multi-subject fMRI brain decoding">
+            <img loading="lazy" decoding="async" src="assets/mindformer-method.png" alt="MindFormer method diagram for multi-subject fMRI brain decoding">
           </a>
           <div class="pub-copy">
             <h3><a href="https://arxiv.org/pdf/2405.17720" target="_blank" rel="noopener noreferrer">MindFormer: Semantic Alignment of Multi-Subject fMRI for Brain Decoding</a></h3>
@@ -197,11 +212,9 @@
             <p class="venue">arXiv, 2024</p>
           </div>
         </article>
-
-        <article class="publication featured">
-          <a class="pub-image" href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer" aria-label="MR reconstruction paper">
-            <img src="assets/mri-reconstruction-main.png" alt="MR reconstruction paper main figure">
-          </a>
+          </div>
+          <div class="publication-list">
+        <article class="publication publication-list-item">
           <div class="pub-copy">
             <h3><a href="https://archive.ismrm.org/2023/4039.html" target="_blank" rel="noopener noreferrer">MR Reconstruction in k-space using Vision Transformer boosted with Masked Image Modeling</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee</strong>, Sung-Hong Park.</p>
@@ -210,10 +223,7 @@
           </div>
         </article>
 
-        <article class="publication featured">
-          <a class="pub-image" href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer" aria-label="Metal artifact correction MRI paper">
-            <img src="assets/metal-artifact-mri.png" alt="Metal artifact correction MRI paper figure">
-          </a>
+        <article class="publication publication-list-item">
           <div class="pub-copy">
             <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-17247-2_5" target="_blank" rel="noopener noreferrer">Metal Artifact Correction MRI Using Multi-contrast Deep Neural Networks for Diagnosis of Degenerative Spinal Diseases</a></h3>
             <p class="authors">Jaa-Yeon Lee, Min-Ah Yoon, Chang-Gyu Chee, Jae-Hun Cho, Jin-Hwan Park, Sung-Hong Park.</p>
@@ -222,10 +232,7 @@
           </div>
         </article>
 
-        <article class="publication featured">
-          <a class="pub-image" href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer" aria-label="Two-step low-dose CT denoising paper">
-            <img src="assets/ldct-two-step.png" alt="Two-step low-dose CT denoising paper figure">
-          </a>
+        <article class="publication publication-list-item">
           <div class="pub-copy">
             <h3><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.16628" target="_blank" rel="noopener noreferrer">An Unsupervised Two-step Training Framework for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Jang-Hwan Choi.</p>
@@ -234,10 +241,7 @@
           </div>
         </article>
 
-        <article class="publication featured">
-          <a class="pub-image" href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer" aria-label="Unsupervised domain adaptation CT paper">
-            <img src="assets/domain-adaptation-ldct.png" alt="Unsupervised domain adaptation CT paper figure">
-          </a>
+        <article class="publication publication-list-item">
           <div class="pub-copy">
             <h3><a href="https://ieeexplore.ieee.org/document/9969607" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors"><strong>Jaa-Yeon Lee</strong>, Wonjin Kim, Yebin Lee, Ji-Yeon Lee, Eunji Ko, Jang-Hwan Choi.</p>
@@ -246,10 +250,7 @@
           </div>
         </article>
 
-        <article class="publication featured">
-          <a class="pub-image" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer" aria-label="Wavelet low-dose CT denoising paper">
-            <img src="assets/wavelet-ldct-main.png" alt="Wavelet subband-specific learning paper main figure">
-          </a>
+        <article class="publication publication-list-item">
           <div class="pub-copy">
             <h3><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Wavelet Subband-specific Learning for Low-dose Computed Tomography Denoising</a></h3>
             <p class="authors">Wonjin Kim, <strong>Jaayeon Lee</strong>, Mihyun Kang, Jin Sung Kim, Jang-Hwan Choi.</p>
@@ -257,6 +258,8 @@
             <p class="pub-links"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0274308" target="_blank" rel="noopener noreferrer">Paper</a></p>
           </div>
         </article>
+          </div>
+        </details>
       </section>
 
       <section id="education" class="content-section">
