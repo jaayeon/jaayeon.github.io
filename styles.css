@@ -322,40 +322,96 @@ dd {
   gap: 14px;
 }
 
+.research-visual {
+  position: relative;
+  isolation: isolate;
+}
+
 .pub-image {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid #c3d7e2;
-  border-radius: 6px;
+  border-radius: 12px;
   background: #fff;
 }
 
 .pub-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--figure-x, 50%) var(--figure-y, 50%);
   background: #fff;
-  transform-origin: var(--figure-x, 50%) var(--figure-y, 50%);
+}
+
+.figure-expand {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 11px;
+  border: 1px solid rgba(195, 215, 226, 0.85);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #285f82;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(34, 48, 59, 0.08);
+}
+
+.figure-expand:hover,
+.figure-expand:focus-visible {
+  background: #e8f3fa;
+}
+
+.figure-viewer {
+  width: min(1200px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 48px 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 80px rgba(15, 35, 50, 0.25);
+}
+
+.figure-viewer::backdrop {
+  background: rgba(22, 40, 54, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.figure-viewer img {
+  width: 100%;
+  max-height: calc(100dvh - 120px);
+  object-fit: contain;
+}
+
+.figure-viewer .figure-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--soft);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
 }
 
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .pub-image {
-    cursor: zoom-in;
     transition: border-color 180ms ease, box-shadow 180ms ease;
   }
 
   .pub-image img {
-    transition: transform 240ms ease-out;
-    will-change: auto;
+    transition: object-position 120ms ease-out;
   }
 
   .pub-image.is-exploring {
     border-color: var(--link);
-    box-shadow: 0 5px 18px rgba(36, 99, 154, 0.12);
-  }
-
-  .pub-image.is-exploring img {
-    transform: scale(1.65);
+    box-shadow: 0 6px 20px rgba(36, 99, 154, 0.12);
   }
 }
 

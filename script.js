@@ -15,12 +15,47 @@ newsToggle?.addEventListener("click", () => {
   });
 });
 
-// Keep the figure's natural proportions; magnify around the pointer on desktop.
+// Pan cropped previews with the pointer; open the complete figure in a dialog.
 const figureMotion = window.matchMedia(
   "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
 );
 
+const figureViewer = document.createElement("dialog");
+figureViewer.className = "figure-viewer";
+figureViewer.setAttribute("aria-label", "Full research figure");
+const closeFigure = document.createElement("button");
+closeFigure.type = "button";
+closeFigure.className = "figure-close";
+closeFigure.textContent = "Close ×";
+const fullFigure = document.createElement("img");
+figureViewer.append(closeFigure, fullFigure);
+document.body.append(figureViewer);
+closeFigure.addEventListener("click", () => figureViewer.close());
+figureViewer.addEventListener("click", (event) => {
+  if (event.target !== figureViewer) return;
+  const bounds = figureViewer.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) figureViewer.close();
+});
+
 for (const figure of document.querySelectorAll(".pub-image")) {
+  const image = figure.querySelector("img");
+  if (!image) continue;
+  const wrapper = document.createElement("div");
+  wrapper.className = "research-visual";
+  figure.before(wrapper);
+  wrapper.append(figure);
+  const expand = document.createElement("button");
+  expand.type = "button";
+  expand.className = "figure-expand";
+  expand.textContent = "View figure ↗";
+  expand.setAttribute("aria-label", `View full figure: ${image.alt}`);
+  expand.addEventListener("click", () => {
+    fullFigure.src = image.currentSrc || image.src;
+    fullFigure.alt = image.alt;
+    figureViewer.showModal();
+  });
+  wrapper.append(expand);
   const resetFigure = () => {
     figure.classList.remove("is-exploring");
     figure.style.removeProperty("--figure-x");
