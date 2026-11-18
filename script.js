@@ -26,16 +26,46 @@ figureViewer.setAttribute("aria-label", "Full research figure");
 const closeFigure = document.createElement("button");
 closeFigure.type = "button";
 closeFigure.className = "figure-close";
-closeFigure.textContent = "Close ×";
+closeFigure.textContent = "×";
+closeFigure.setAttribute("aria-label", "Close figure");
 const fullFigure = document.createElement("img");
 figureViewer.append(closeFigure, fullFigure);
 document.body.append(figureViewer);
-closeFigure.addEventListener("click", () => figureViewer.close());
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let closeTimer;
+let previousOverflow = "";
+const sizeFigureViewer = () => {
+  const ratio = fullFigure.naturalWidth / fullFigure.naturalHeight;
+  if (!Number.isFinite(ratio) || ratio <= 0) return;
+  const width = Math.min(1200, window.innerWidth - 40, (window.innerHeight - 40) * ratio);
+  figureViewer.style.setProperty("--viewer-width", `${Math.max(1, width)}px`);
+};
+const dismissFigure = () => {
+  if (!figureViewer.open || closeTimer) return;
+  figureViewer.classList.remove("is-visible");
+  if (reducedMotion.matches) figureViewer.close();
+  else closeTimer = window.setTimeout(() => figureViewer.close(), 220);
+};
+fullFigure.addEventListener("load", sizeFigureViewer);
+window.addEventListener("resize", () => {
+  if (figureViewer.open) sizeFigureViewer();
+});
+figureViewer.addEventListener("close", () => {
+  window.clearTimeout(closeTimer);
+  closeTimer = undefined;
+  figureViewer.classList.remove("is-visible");
+  document.documentElement.style.overflow = previousOverflow;
+});
+figureViewer.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  dismissFigure();
+});
+closeFigure.addEventListener("click", dismissFigure);
 figureViewer.addEventListener("click", (event) => {
   if (event.target !== figureViewer) return;
   const bounds = figureViewer.getBoundingClientRect();
   if (event.clientX < bounds.left || event.clientX > bounds.right ||
-      event.clientY < bounds.top || event.clientY > bounds.bottom) figureViewer.close();
+      event.clientY < bounds.top || event.clientY > bounds.bottom) dismissFigure();
 });
 
 for (const figure of document.querySelectorAll(".pub-image")) {
@@ -45,7 +75,17 @@ for (const figure of document.querySelectorAll(".pub-image")) {
   figure.addEventListener("click", () => {
     fullFigure.src = image.currentSrc || image.src;
     fullFigure.alt = image.alt;
+    const ratio = image.naturalWidth / image.naturalHeight;
+    if (Number.isFinite(ratio) && ratio > 0) {
+      const width = Math.min(1200, window.innerWidth - 40, (window.innerHeight - 40) * ratio);
+      figureViewer.style.setProperty("--viewer-width", `${Math.max(1, width)}px`);
+    }
+    previousOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     figureViewer.showModal();
+    // Establish the initial state before starting the opening transition.
+    figureViewer.getBoundingClientRect();
+    figureViewer.classList.add("is-visible");
   });
   const resetFigure = () => {
     figure.classList.remove("is-exploring");

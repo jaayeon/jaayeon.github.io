@@ -357,37 +357,78 @@ dd {
 }
 
 .figure-viewer {
-  width: min(1200px, calc(100% - 32px));
-  max-height: calc(100dvh - 32px);
-  padding: 48px 18px 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
+  width: var(--viewer-width, min(1200px, calc(100vw - 40px)));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 10px;
   background: #fff;
-  box-shadow: 0 20px 80px rgba(15, 35, 50, 0.25);
+  box-shadow: 0 24px 100px rgba(8, 20, 32, 0.3);
+  opacity: 0;
+  transform: translateY(10px) scale(0.975);
+  transition: opacity 220ms ease, transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.figure-viewer.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .figure-viewer::backdrop {
-  background: rgba(22, 40, 54, 0.65);
-  backdrop-filter: blur(5px);
+  background: rgba(16, 29, 42, 0);
+  backdrop-filter: blur(0);
+  transition: background 220ms ease, backdrop-filter 220ms ease;
+}
+
+.figure-viewer.is-visible::backdrop {
+  background: rgba(16, 29, 42, 0.62);
+  backdrop-filter: blur(8px);
 }
 
 .figure-viewer img {
+  display: block;
   width: 100%;
-  max-height: calc(100dvh - 120px);
-  object-fit: contain;
+  height: auto;
+  background: #fff;
 }
 
 .figure-viewer .figure-close {
   position: absolute;
   top: 10px;
-  right: 14px;
-  border: 0;
-  padding: 5px 10px;
-  border-radius: 6px;
-  background: var(--soft);
-  color: var(--ink);
-  font: inherit;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(239, 244, 248, 0.85);
+  backdrop-filter: blur(8px);
+  color: #304555;
+  font: 24px/1 Arial, sans-serif;
   cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.figure-viewer .figure-close:hover {
+  background: #fff;
+}
+
+.figure-viewer .figure-close:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: -4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure-viewer,
+  .figure-viewer::backdrop {
+    transition: none;
+    transform: none;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
