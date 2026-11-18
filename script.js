@@ -110,7 +110,20 @@ for (const figure of document.querySelectorAll(".pub-image")) {
   figureMotion.addEventListener("change", resetFigure);
 }
 
-// Highlight the destination after scrolling settles, rather than during travel.
+// Move only the masked foreground in the portrait.
+const portraitSubject = document.querySelector(".portrait-subject");
+portraitSubject?.addEventListener("pointermove", (event) => {
+  if (!figureMotion.matches || event.pointerType !== "mouse") return;
+  const bounds = portraitSubject.getBoundingClientRect();
+  const x = (event.clientX - bounds.left) / bounds.width;
+  const y = (event.clientY - bounds.top) / bounds.height;
+  portraitSubject.style.setProperty("--portrait-x", `${(x - 0.5) * 4}px`);
+  portraitSubject.style.setProperty("--portrait-y", `${(y - 0.5) * 4}px`);
+  portraitSubject.style.setProperty("--portrait-light-x", `${x * 100}%`);
+  portraitSubject.style.setProperty("--portrait-light-y", `${y * 100}%`);
+});
+
+// Mark the destination once scrolling settles.
 let arrivalFrame;
 let arrivalTimer;
 const highlightResearch = (target) => {
@@ -126,7 +139,7 @@ const highlightResearch = (target) => {
     previousTop = top;
     if (reducedMotion.matches || (stableFrames >= 5 && performance.now() - started > 150) || performance.now() - started > 1800) {
       target.classList.add("is-arrival");
-      arrivalTimer = window.setTimeout(() => target.classList.remove("is-arrival"), 2200);
+      arrivalTimer = window.setTimeout(() => target.classList.remove("is-arrival"), reducedMotion.matches ? 1800 : 800);
     } else arrivalFrame = window.requestAnimationFrame(waitForArrival);
   };
   arrivalFrame = window.requestAnimationFrame(waitForArrival);

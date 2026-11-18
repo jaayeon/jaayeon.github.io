@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaayeon.github.io/">
     <meta property="og:image" content="https://jaayeon.github.io/assets/profile-face-sr.png">
-    <link rel="stylesheet" href="styles.css?v=20261119-research-arrival">
+    <link rel="stylesheet" href="styles.css?v=20261119-profile-motion">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -42,7 +42,12 @@
   <body>
     <main class="site-layout">
       <aside class="profile-sidebar" aria-label="Profile">
-        <img class="profile-photo" src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
+        <div class="profile-photo">
+          <img src="assets/profile-face-sr.png" alt="Jaa-Yeon Lee">
+          <div class="portrait-subject" aria-hidden="true">
+            <img src="assets/profile-face-sr.png" alt="">
+          </div>
+        </div>
         <p class="eyebrow">KAIST AI / BISPL Lab</p>
         <h1>Jaa-Yeon Lee</h1>
         <p class="position">PhD Student</p>
@@ -86,13 +91,9 @@
           <a href="https://scholar.google.com/citations?user=HNMjoNEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jong Chul Ye</a>.
         </p>
         <p class="about-research">
-          My work began in <strong>medical imaging and reconstruction</strong> and has since expanded
-          to <strong>representation alignment</strong> and <strong>controllable generation</strong>.
-        </p>
-        <p class="about-research">
-          Today, I focus on <strong>diffusion reinforcement learning</strong> and
-          <strong>autoregressive video diffusion</strong>, working toward long video generation
-          that stays consistent over time and responds to changing prompts.
+          My research focuses on <strong>diffusion reinforcement learning</strong> for diffusion models.
+          I am currently working on <strong>autoregressive video diffusion</strong>, with a focus on
+          <strong>long video generation</strong> and <strong>controllability</strong>.
         </p>
         <p class="about-contact">Feel free to reach out if you would like to connect or discuss research!</p>
         <div class="focus-tags" aria-label="Explore research by topic">
@@ -344,6 +345,6 @@
     <footer class="footer">
       <p>&copy; 2026 Jaa-Yeon Lee.</p>
     </footer>
-    <script src="script.js?v=20261119-research-arrival"></script>
+    <script src="script.js?v=20261119-profile-motion"></script>
   </body>
 </html>
