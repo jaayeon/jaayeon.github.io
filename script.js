@@ -110,6 +110,28 @@ for (const figure of document.querySelectorAll(".pub-image")) {
   figureMotion.addEventListener("change", resetFigure);
 }
 
+// Highlight the destination after scrolling settles, rather than during travel.
+let arrivalFrame;
+let arrivalTimer;
+const highlightResearch = (target) => {
+  window.cancelAnimationFrame(arrivalFrame);
+  window.clearTimeout(arrivalTimer);
+  document.querySelectorAll(".research-card.is-arrival").forEach((card) => card.classList.remove("is-arrival"));
+  const started = performance.now();
+  let previousTop = null;
+  let stableFrames = 0;
+  const waitForArrival = () => {
+    const top = target.getBoundingClientRect().top;
+    stableFrames = previousTop !== null && Math.abs(top - previousTop) < 0.5 ? stableFrames + 1 : 0;
+    previousTop = top;
+    if (reducedMotion.matches || (stableFrames >= 5 && performance.now() - started > 150) || performance.now() - started > 1800) {
+      target.classList.add("is-arrival");
+      arrivalTimer = window.setTimeout(() => target.classList.remove("is-arrival"), 2200);
+    } else arrivalFrame = window.requestAnimationFrame(waitForArrival);
+  };
+  arrivalFrame = window.requestAnimationFrame(waitForArrival);
+};
+
 // Topic disclosures work with hover, click, touch, and keyboard navigation.
 const researchTopics = Array.from(document.querySelectorAll(".focus-topic"));
 const hoverTopics = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -153,6 +175,7 @@ for (const topic of researchTopics) {
       history.pushState(null, "", link.hash);
       target.focus({ preventScroll: true });
       target.scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "start" });
+      highlightResearch(target);
     });
   });
 }

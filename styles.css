@@ -231,13 +231,13 @@ dd {
   padding: 5px 12px;
   border: 0;
   border-radius: 999px;
-  background: #edf6fb;
-  color: #315e7b;
+  background: #d4e9f5;
+  color: #244e6b;
   font-size: 12px;
   font-weight: 600;
   list-style: none;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(45, 92, 124, 0.03);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 2px 5px rgba(45, 92, 124, 0.08);
 }
 
 .focus-topic summary::-webkit-details-marker {
@@ -246,8 +246,8 @@ dd {
 
 .focus-topic summary:hover,
 .focus-topic[open] summary {
-  background: #dceef9;
-  color: #194f75;
+  background: #bcdced;
+  color: #163f5c;
   box-shadow: 0 5px 14px rgba(45, 92, 124, 0.1);
 }
 
@@ -267,8 +267,8 @@ dd {
   padding: 0 4px;
   border: 2px solid var(--page);
   border-radius: 999px;
-  background: #d7e9f5;
-  color: #3e7193;
+  background: #39769f;
+  color: #fff;
   font-size: 10px;
   font-weight: 650;
   line-height: 1;
@@ -377,10 +377,25 @@ dd {
   scroll-margin-top: 28px;
 }
 
-.research-card:target {
-  outline: 2px solid #8ab7ce;
-  outline-offset: 9px;
-  border-radius: 6px;
+.research-card:focus {
+  outline: none;
+}
+
+.research-card.is-arrival {
+  border-radius: 8px;
+  background: #deeffa;
+  box-shadow: 0 0 0 10px #deeffa;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .research-card.is-arrival {
+    animation: research-arrival 2200ms ease-out both;
+  }
+
+  @keyframes research-arrival {
+    0%, 100% { background: transparent; box-shadow: 0 0 0 10px transparent; }
+    18%, 55% { background: #deeffa; box-shadow: 0 0 0 10px #deeffa; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
