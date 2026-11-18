@@ -135,7 +135,7 @@ portraitSubject?.addEventListener("pointermove", (event) => {
   portraitSubject.style.setProperty("--portrait-light-y", `${y * 100}%`);
 });
 
-// Mark the destination once scrolling settles.
+// Start the arrival animation as the card comes into view.
 let arrivalFrame;
 let arrivalTimer;
 const highlightResearch = (target) => {
@@ -143,13 +143,10 @@ const highlightResearch = (target) => {
   window.clearTimeout(arrivalTimer);
   document.querySelectorAll(".research-card.is-arrival").forEach((card) => card.classList.remove("is-arrival"));
   const started = performance.now();
-  let previousTop = null;
-  let stableFrames = 0;
   const waitForArrival = () => {
-    const top = target.getBoundingClientRect().top;
-    stableFrames = previousTop !== null && Math.abs(top - previousTop) < 0.5 ? stableFrames + 1 : 0;
-    previousTop = top;
-    if (reducedMotion.matches || (stableFrames >= 5 && performance.now() - started > 150) || performance.now() - started > 1800) {
+    const { top, bottom } = target.getBoundingClientRect();
+    const inView = top < window.innerHeight * 0.8 && bottom > 0;
+    if (reducedMotion.matches || inView || performance.now() - started > 1800) {
       target.classList.add("is-arrival");
       arrivalTimer = window.setTimeout(() => target.classList.remove("is-arrival"), reducedMotion.matches ? 1800 : 800);
     } else arrivalFrame = window.requestAnimationFrame(waitForArrival);
