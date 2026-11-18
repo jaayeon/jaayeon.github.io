@@ -58,25 +58,13 @@ h1 {
 }
 
 h2 {
-  position: relative;
-  isolation: isolate;
-  width: fit-content;
-  margin: 0 0 17px;
+  margin: 0 0 15px;
+  padding: 0 0 7px;
+  border-bottom: 1px solid var(--line);
   color: #253d4e;
-  font-size: 23px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  text-shadow: 0 1px 0 #fff, 0 3px 8px rgba(37, 93, 130, 0.22);
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 24% -14px -35% -11px;
-  background: radial-gradient(ellipse at 42% 45%, rgba(145, 195, 226, 0.36), transparent 72%);
-  pointer-events: none;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 650;
 }
 
 h3 {
