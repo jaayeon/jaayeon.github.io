@@ -33,6 +33,7 @@ figureViewer.append(closeFigure, fullFigure);
 document.body.append(figureViewer);
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let closeTimer;
+let pendingFullFigure;
 let previousOverflow = "";
 const sizeFigureViewer = () => {
   const ratio = fullFigure.naturalWidth / fullFigure.naturalHeight;
@@ -53,6 +54,7 @@ window.addEventListener("resize", () => {
 figureViewer.addEventListener("close", () => {
   window.clearTimeout(closeTimer);
   closeTimer = undefined;
+  pendingFullFigure = undefined;
   figureViewer.classList.remove("is-visible");
   document.documentElement.style.overflow = previousOverflow;
 });
@@ -86,6 +88,16 @@ for (const figure of document.querySelectorAll(".pub-image")) {
     // Establish the initial state before starting the opening transition.
     figureViewer.getBoundingClientRect();
     figureViewer.classList.add("is-visible");
+
+    // Show the preview immediately while the original loads.
+    if (image.dataset.fullSrc) {
+      const original = new Image();
+      pendingFullFigure = original;
+      original.onload = () => {
+        if (pendingFullFigure === original && figureViewer.open) fullFigure.src = original.src;
+      };
+      original.src = image.dataset.fullSrc;
+    }
   });
   const resetFigure = () => {
     figure.classList.remove("is-exploring");
