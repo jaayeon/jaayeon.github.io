@@ -231,7 +231,7 @@ dd {
   padding: 5px 12px;
   border: 1px solid #c4dce9;
   border-radius: 999px;
-  background: linear-gradient(135deg, #fff 0%, #e9f4fb 100%);
+  background: #edf6fb;
   color: #315e7b;
   font-size: 12px;
   font-weight: 600;
@@ -247,7 +247,7 @@ dd {
 .focus-topic summary:hover,
 .focus-topic[open] summary {
   border-color: #87b3cf;
-  background: linear-gradient(135deg, #f8fcff 0%, #dceef9 100%);
+  background: #dceef9;
   color: #194f75;
   box-shadow: 0 5px 14px rgba(45, 92, 124, 0.1);
 }
